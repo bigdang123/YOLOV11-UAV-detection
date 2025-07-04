@@ -1,0 +1,24 @@
+数据集：
+本数据集在datasets文件夹中，图像和标签分别存储在images和label文件夹中。
+数据集图片可分为两部分：
+（1）由CSDN论坛目标检测专栏付费使用，YOLO系列目标检测数据集收录：https://blog.csdn.net/zhiqingAI/article/details/124230743，约3000张无人机图片及对应标签。 
+注：免责声明：（1）图片使用前请向CSDN专栏支付相应费用，请勿直接使用，仅限学术交流，切勿商用。
+（2）由本团队拍摄DJI 3TD，DJI NEO，DWI-S811型无人机（淘宝无人机）为目标机拍摄制作，以包含标签，约3000张图片（部分图片因包含人像，为避免肖像侵权已删除，对应标签以删除）。
+注：（2）图片仅供学术交流使用，请勿商用。
+
+
+
+项目说明：
+本项目基于YOLOv11模型，在ultralytics-8.3.31版本的基础上，对模型进行了轻量化处理，可适配RK3588S系列开发板，用于无人机目标的视觉检测。
+模型网络配置文件分别为：
+drones_conv.yaml（YOLOv11原始网络）
+drones_ghost.yaml（ghost模块替换CONV）
+drones_ghost_multi.yaml（多模型替换）
+已训练好的模型为：
+ghostn.pt
+ghostn_multi.pt
+
+若需要将训练好的模型进行部署，请参考如下网站内容：
+https://blog.csdn.net/A_l_b_ert/article/details/143814080
+
+
